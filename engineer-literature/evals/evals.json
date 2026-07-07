@@ -1,0 +1,45 @@
+{
+  "skill_name": "engineer-literature",
+  "evals": [
+    {
+      "id": "single-english-paper-to-chinese-writing-card",
+      "prompt": "Use engineer-literature to read this English abstract for my Chinese engineering paper. Tell me what it contributes and how I can cite it in the introduction.",
+      "expected_output": "The assistant explains in Chinese what problem the paper solves, the core method, evidence strength, limitations, and where it can be used in a Chinese introduction. It separates facts from inference if only an abstract is available.",
+      "assertions": [
+        {
+          "name": "chinese_research_card",
+          "description": "The output is a Chinese paper card focused on engineering research value, not only a generic summary."
+        },
+        {
+          "name": "writing_bridge",
+          "description": "The response includes how to use the paper in introduction or related-work writing."
+        },
+        {
+          "name": "source_scope_caveat",
+          "description": "The response notes limits when only an abstract or partial source is available."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "frontier-scan-requires-source-verification",
+      "prompt": "Find the latest frontier papers on physics-informed graph neural networks for engineering dynamics and give me Chinese related-work material.",
+      "expected_output": "The assistant searches or verifies current sources before naming latest papers, groups papers by technical route, and produces Chinese related-work material with verified publication/preprint status and caveats.",
+      "assertions": [
+        {
+          "name": "verifies_latest_sources",
+          "description": "The assistant does not rely only on memory for latest/frontier literature."
+        },
+        {
+          "name": "method_family_grouping",
+          "description": "The output groups papers by technical routes and evidence level rather than dumping a chronological list."
+        },
+        {
+          "name": "chinese_related_work",
+          "description": "The response converts the scan into Chinese related-work or manuscript positioning material."
+        }
+      ],
+      "files": []
+    }
+  ]
+}

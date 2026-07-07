@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# For a metadata-only public release, ignore third-party paper images unless their
+# redistribution license has been checked.
+# assets/engineering-reference-atlas/**/*.png

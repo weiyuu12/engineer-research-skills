@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineer Read Code"
+  short_description: "Chinese explanations for engineering code."
+  default_prompt: "Use $engineer-read-code to explain this engineering code or README for a beginner in Chinese."

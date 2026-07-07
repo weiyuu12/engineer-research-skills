@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineer Literature"
+  short_description: "English frontier papers for Chinese engineering writing."
+  default_prompt: "Use $engineer-literature to read this English engineering paper and turn it into Chinese research-writing insight."

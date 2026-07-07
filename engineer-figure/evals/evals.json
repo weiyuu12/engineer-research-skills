@@ -1,0 +1,73 @@
+{
+  "skill_name": "engineer-figure",
+  "evals": [
+    {
+      "id": "backend-exclusivity-r-missing-runtime",
+      "prompt": "Use R to remake the provided ecological heatmap plus taxonomy-flow figure in Nature style with simulated data. Assume R/Rscript is not installed locally.",
+      "expected_output": "The assistant must not use Python or any non-R plotting backend to draw a preview or export. It should report that R/Rscript is unavailable, provide or offer an R-only script and install/run instructions, and stop before rendering.",
+      "assertions": [
+        {
+          "name": "no_cross_backend_rendering",
+          "description": "When R is selected and unavailable, no Python/matplotlib/seaborn/plotly preview, SVG, PDF, TIFF, or PNG is generated as a substitute."
+        },
+        {
+          "name": "selected_backend_blocker_reported",
+          "description": "The response clearly reports the missing R runtime or package blocker and does not present a non-R figure as completed output."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "backend-exclusivity-python-missing-package",
+      "prompt": "Use Python to make a Nature-style multi-panel heatmap and flow figure with simulated data. Assume matplotlib or another required Python plotting package is not installed locally.",
+      "expected_output": "The assistant must not use R or any non-Python plotting backend to draw a preview or export. It should report the missing Python plotting dependency, provide or offer a Python-only script and install/run instructions, and stop before rendering.",
+      "assertions": [
+        {
+          "name": "no_cross_backend_rendering",
+          "description": "When Python is selected and unavailable, no R/ggplot2/ComplexHeatmap/patchwork preview, SVG, PDF, TIFF, or PNG is generated as a substitute."
+        },
+        {
+          "name": "selected_backend_blocker_reported",
+          "description": "The response clearly reports the missing Python runtime or package blocker and does not present a non-Python figure as completed output."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "backend-selection-required-before-plotting",
+      "prompt": "Make a Nature-style paper figure for my algorithm results. I want it to look polished and include a mechanism panel plus validation metrics.",
+      "expected_output": "The assistant asks the blocking question \"Python or R?\" and stops before generating mock data, scripts, previews, or exports because no backend was selected.",
+      "assertions": [
+        {
+          "name": "asks_python_or_r",
+          "description": "The response asks the exact backend-selection question or an equivalent concise Python/R choice."
+        },
+        {
+          "name": "no_plotting_before_backend",
+          "description": "The response does not create figure code, mock data, image files, or choose a backend by default."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "engineering-control-uses-atlas-and-claim-first-contract",
+      "prompt": "Use Python to draw a publication figure for an interception guidance algorithm. It should show the control loop, trajectory evidence, and comparison against baselines.",
+      "expected_output": "The assistant uses the Python-only workflow, states a claim-first figure contract, classifies the figure as engineering/control, loads or applies the engineering reference atlas, and plans a mechanism/control-loop hero panel with supporting trajectory and metric evidence rather than defaulting to a plain metric grid.",
+      "assertions": [
+        {
+          "name": "claim_first_contract",
+          "description": "The response defines the core conclusion, reviewer question, panel evidence roles, and review risks before plotting."
+        },
+        {
+          "name": "engineering_reference_route",
+          "description": "The response explicitly routes through the engineering/control reference atlas or uses its control-loop/trajectory visual patterns."
+        },
+        {
+          "name": "not_metric_grid_first",
+          "description": "The first design is not just bars, lines, or a plain heatmap; it includes a mechanism or process hero panel."
+        }
+      ],
+      "files": []
+    }
+  ]
+}

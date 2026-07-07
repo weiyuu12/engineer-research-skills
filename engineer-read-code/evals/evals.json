@@ -1,0 +1,65 @@
+{
+  "skill_name": "engineer-read-code",
+  "evals": [
+    {
+      "id": "beginner-function-explanation-in-chinese",
+      "prompt": "我是编程小白，帮我解释这段代码：\n\n```python\ndef add_tax(price, rate):\n    total = price * (1 + rate)\n    return round(total, 2)\n\nprint(add_tax(100, 0.08))\n```",
+      "expected_output": "The assistant explains in Chinese what the function does before explaining syntax, describes inputs and output, walks through the function definition, variable, return, round, and function call, and uses a tiny numeric example showing why the result is 108.0 or 108.00.",
+      "assertions": [
+        {
+          "name": "purpose_before_syntax",
+          "description": "The explanation starts with the code's purpose and input/output behavior, not a jargon-heavy syntax dump."
+        },
+        {
+          "name": "beginner_friendly_chinese",
+          "description": "The response uses Chinese labels and plain beginner-friendly language."
+        },
+        {
+          "name": "tiny_numeric_example",
+          "description": "The response shows the calculation with easy numbers and intermediate steps."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "whole-file-reading-shows-execution-order",
+      "prompt": "帮我读懂这个小脚本，假设我刚开始学 Python：\n\n```python\nnames = [\"Li\", \"Wang\", \"Zhao\"]\nfor name in names:\n    if len(name) > 2:\n        print(name.upper())\n```",
+      "expected_output": "The assistant explains the overall purpose, then the run order: create a list, loop through names, check length, print uppercase only for names longer than 2 characters. It explains list indexing or iteration only as needed, defines for/if/len/upper in simple Chinese, and mentions that indentation controls what belongs inside the loop and condition.",
+      "assertions": [
+        {
+          "name": "execution_order",
+          "description": "The response explains what happens first, next, and finally."
+        },
+        {
+          "name": "syntax_terms_defined",
+          "description": "The response explains for, if, len, upper, and indentation in beginner-friendly terms."
+        },
+        {
+          "name": "common_pitfall",
+          "description": "The response mentions a likely beginner pitfall such as indentation or the length condition."
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "engineering-readme-project-orientation",
+      "prompt": "我是小白，帮我读懂这个工科深度学习项目 README：它说先 install requirements，然后 run train.py --config configs/pinn.yaml，再 run evaluate.py 输出 figures/result.png。我想知道每一步是干嘛的。",
+      "expected_output": "The assistant explains in Chinese what the project likely solves, how installation, training, config, evaluation, and figure output relate to the research workflow, where the code entry points are, what inputs/outputs exist, and what beginner pitfalls to check first.",
+      "assertions": [
+        {
+          "name": "project_goal_first",
+          "description": "The response starts from the likely engineering/research purpose rather than only listing commands."
+        },
+        {
+          "name": "run_pipeline_explained",
+          "description": "The response explains install, train, config, evaluate, and output steps in beginner-friendly Chinese."
+        },
+        {
+          "name": "beginner_project_pitfalls",
+          "description": "The response mentions likely blockers such as dependencies, paths, data, config, CPU/GPU, or output locations."
+        }
+      ],
+      "files": []
+    }
+  ]
+}

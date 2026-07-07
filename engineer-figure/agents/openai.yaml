@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineer Figure"
+  short_description: "Engineering paper figures in Python or R."
+  default_prompt: "Use $engineer-figure to design and render a publication-quality engineering figure from my data and manuscript claim."
