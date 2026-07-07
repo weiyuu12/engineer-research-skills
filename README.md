@@ -8,6 +8,30 @@
 
 科研最难的地方，很多时候不是你不努力，而是没有人把“第一步怎么走”讲清楚。这个项目就是为那一步准备的。
 
+## 效果预览
+
+这套 skills 不是只给你一段文字建议，而是希望把“科研输出”真正做出来：读文献能落到写作，读代码能落到复现，画图能落到论文表达。
+
+下面这些是 `engineer-figure` 中内置的示例图，展示它希望达到的图形质量和论文表达方式。
+
+### 论文级多面板图
+
+一张好的论文图不只是把数据摆出来，而是把“方法、证据、验证、结论”组织成一条能说服审稿人的证据链。
+
+![Material design, release logic and physical validation](engineer-figure/assets/gallery/fig1-material-mechanism-rich.png)
+
+![Perturbation, synergy and orthogonal validation](engineer-figure/assets/gallery/fig5-validation-perturbation-rich.png)
+
+### 图型能力预览
+
+除了完整的多面板图，也可以根据论文需要选择雷达图、极坐标图、网络图、矩阵图、热图、趋势图等更适合工科结果表达的图型。
+
+| 多指标/方向性比较 | 网络与矩阵关系 |
+|---|---|
+| ![Radar and polar chart atlas](engineer-figure/assets/chart-atlas/atlas-05-radar-polar.png) | ![Network and matrix chart atlas](engineer-figure/assets/chart-atlas/atlas-10-network-matrix.png) |
+
+> 注：当前仓库仍处于私有审查阶段。公开发布前，建议再次检查 `engineer-figure/assets/` 中所有示例图和第三方参考素材的来源与许可证；不确定可再分发的图片，可以改成只保留链接和说明。
+
 ## 适合谁使用
 
 - 刚进课题组，不知道英文论文该从哪里读起的研究生
