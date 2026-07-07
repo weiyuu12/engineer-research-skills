@@ -50,7 +50,7 @@
 
 | 神经算子 / 物理场预测 | 控制任务 / 轨迹验证 |
 |---|---|
-| <img src="engineer-figure/assets/engineering-reference-atlas/02_simulation_surrogate_physics/06_deep_neural_operator_free_boundary_NMI2026_Fig2.png" alt="Neural operator validation with physical field predictions" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/10_sindy_rl_control_tasks_NatCommun2025_Fig2.png" alt="Control tasks and trajectory validation" width="420"> |
+| <img src="engineer-figure/assets/engineering-reference-atlas/02_simulation_surrogate_physics/06_deep_neural_operator_free_boundary_NMI2026_Fig2.png" alt="Neural operator validation with physical field predictions" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/24_model_free_tracking_control_NatCommun2023_Fig1.png" alt="Machine learning tracking controller with desired trajectories" width="420"> |
 
 | 网络控制 / 多智能体系统 | 逆向设计 / 工程优化 |
 |---|---|
@@ -58,9 +58,9 @@
 
 | 实验平台 / 传感数据 | 能源系统 / 物理约束建模 |
 |---|---|
-| <img src="engineer-figure/assets/engineering-reference-atlas/05_robotics_embodied_ai/17_causal_chambers_physical_testbed_NMI2024_Fig1.png" alt="Physical testbed and sensor measurements" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/22_battery_pinn_soh_NatCommun2024_Fig1.png" alt="Battery state estimation and physics-informed modeling" width="420"> |
+| <img src="engineer-figure/assets/engineering-reference-atlas/05_robotics_embodied_ai/25_dronehub_robotics_testbed_npjRobotics2025_Fig7.png" alt="Robotics testbed with sensing and data systems" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/22_battery_pinn_soh_NatCommun2024_Fig1.png" alt="Battery state estimation and physics-informed modeling" width="420"> |
 
-这些图像主要帮你快速理解这套 skills 面向哪些工程图形。公开发布时，请依据各图像来源的许可条款确认再分发方式。
+这些图像主要帮你快速理解这套 skills 面向哪些工程图形。公开发布时，请依据各图像来源的许可条款确认再分发方式；已收录的第三方论文图来源见 [ATTRIBUTION.md](ATTRIBUTION.md)。
 
 ## 适合谁使用
 
@@ -324,3 +324,9 @@ engineer-research-skills/
 这套包现在先从最基础、最常用的三件事开始：读文献、读代码、画论文图。
 
 希望它能像一个一直在旁边提醒你重点的师兄师姐，帮你把第一篇论文从“完全不知道怎么开始”，慢慢推进到“我知道自己在研究什么，也知道该怎么表达它”。
+
+## 许可
+
+本项目主体内容采用 [Creative Commons Attribution 4.0 International License](LICENSE) 发布。你可以自由复制、修改、二次创作、引用和再分发，但请保留适当署名和来源链接。
+
+仓库中来自第三方论文或出版页面的参考图片不自动适用本项目许可，请以原始论文页面和 [ATTRIBUTION.md](ATTRIBUTION.md) 中记录的许可信息为准。

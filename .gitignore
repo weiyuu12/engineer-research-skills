@@ -9,8 +9,8 @@ __pycache__/
 venv/
 tmp/
 temp/
+tmp-image-candidates/
 
 # Generated archives
 *.zip
 *.tar.gz
-

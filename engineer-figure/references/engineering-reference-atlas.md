@@ -37,9 +37,9 @@ gallery as the first visual inspiration source.
 |---|---|---|
 | Deep learning framework or unified model | `01`, `02`, `03` | Architecture/training/search story instead of isolated metrics |
 | Digital twin, neural operator, PINN, surrogate simulation | `04`, `05`, `06`, `19`, `21`, `23` | Shows physical state, learned mapping, and validation evidence together |
-| Reinforcement learning or control loop | `07`, `08`, `09`, `10`, `11` | Makes observation-policy-action-feedback visible |
+| Reinforcement learning or control loop | `07`, `08`, `09`, `10`, `11`, `24` | Makes observation-policy-action-feedback visible |
 | Engineering inverse design or system optimization | `12`, `13`, `15`, `22` | Connects design space, learned predictor, physical system, and verification |
-| Robotics, embodied AI, real-world testbed | `16`, `17` | Combines task scene, perception/planning, and execution/validation |
+| Robotics, embodied AI, real-world testbed | `16`, `17`, `25` | Combines task scene, perception/planning, and execution/validation |
 | Data feedback, degradation, mechanism risk | `18` | Makes recursive process and failure mechanism visible |
 
 ## Reference list
@@ -67,6 +67,8 @@ gallery as the first visual inspiration source.
 | 21 | `02_simulation_surrogate_physics/21_physics_informed_gnn_dynamics_NatCommun2026_Fig1.png` | Conservation laws embedded into graph message passing | Physics-informed GNN, dynamics, invariant/equivariant modeling |
 | 22 | `04_engineering_design_systems/22_battery_pinn_soh_NatCommun2024_Fig1.png` | Mechanistic prior plus data model plus prognosis task | Battery/energy systems, state estimation, degradation prediction |
 | 23 | `02_simulation_surrogate_physics/23_interpretable_network_dynamics_symbolic_NatCommun2025_Fig1.png` | Black-box observations to interpretable governing equations | Symbolic regression, interpretable dynamics, equation discovery |
+| 24 | `03_control_reinforcement_learning/24_model_free_tracking_control_NatCommun2023_Fig1.png` | Training/testing controller schematic paired with target trajectory evidence | Tracking control, desired trajectories, model-free control |
+| 25 | `05_robotics_embodied_ai/25_dronehub_robotics_testbed_npjRobotics2025_Fig7.png` | Physical robotics platforms plus ROS, localization, environmental sensing, video, and feedback data streams | Robotics testbeds, sensor systems, experimental platforms |
 
 ## Visual moves to borrow
 

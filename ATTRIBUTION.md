@@ -1,0 +1,18 @@
+# Attribution
+
+This project is licensed under the Creative Commons Attribution 4.0 International License, except where noted otherwise.
+
+Some README and skill reference images are third-party open-access paper figures. They are included as visual references for engineering figure structure, not as original project artwork. When reusing or redistributing these images, check the original article page and follow the source license.
+
+## Third-party Figure Sources
+
+| Asset | Source article | Figure | Source image | License note |
+|---|---|---|---|---|
+| `engineer-figure/assets/engineering-reference-atlas/02_simulation_surrogate_physics/06_deep_neural_operator_free_boundary_NMI2026_Fig2.png` | [Deep neural operator for free boundary problems](https://www.nature.com/articles/s42256-026-01233-9) | Fig. 2 | [Springer Nature image](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs42256-026-01233-9/MediaObjects/42256_2026_1233_Fig2_HTML.png) | Open access; CC BY 4.0 noted in local manifest |
+| `engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/24_model_free_tracking_control_NatCommun2023_Fig1.png` | [Model-free tracking control of complex dynamical trajectories with machine learning](https://www.nature.com/articles/s41467-023-41379-3) | Fig. 1 | [Springer Nature image](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-023-41379-3/MediaObjects/41467_2023_41379_Fig1_HTML.png) | Article page links to CC BY 4.0 |
+| `engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/08_network_control_model_based_rl_NMI2024_Fig1.png` | [Efficient and scalable reinforcement learning for large-scale network control](https://www.nature.com/articles/s42256-024-00879-7) | Fig. 1 | [Springer Nature image](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs42256-024-00879-7/MediaObjects/42256_2024_879_Fig1_HTML.png) | Open access; CC BY 4.0 noted in local manifest |
+| `engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/12_rf_inverse_design_emulator_NatCommun2024_Fig1.png` | [Deep-learning enabled generalized inverse design of multi-port radio-frequency and sub-terahertz passives and integrated circuits](https://www.nature.com/articles/s41467-024-54178-1) | Fig. 1 | [Springer Nature image](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-024-54178-1/MediaObjects/41467_2024_54178_Fig1_HTML.png) | Open access; verify exact reuse terms on article page |
+| `engineer-figure/assets/engineering-reference-atlas/05_robotics_embodied_ai/25_dronehub_robotics_testbed_npjRobotics2025_Fig7.png` | [The DroneHub: a multi-environment testbed for sustainability robotics](https://www.nature.com/articles/s44182-025-00054-z) | Fig. 7 | [Springer Nature image](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs44182-025-00054-z/MediaObjects/44182_2025_54_Fig7_HTML.png) | Open access; verify exact reuse terms on article page |
+| `engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/22_battery_pinn_soh_NatCommun2024_Fig1.png` | [Physics-informed neural network for lithium-ion battery degradation stable modeling and prognosis](https://www.nature.com/articles/s41467-024-48779-z) | Fig. 1 | [Springer Nature image](https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-024-48779-z/MediaObjects/41467_2024_48779_Fig1_HTML.png) | Open access; CC BY 4.0 noted in local manifest |
+
+For the complete engineering reference image index, see `engineer-figure/assets/engineering-reference-atlas/manifest.csv`.
