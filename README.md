@@ -12,41 +12,39 @@
 
 这套 skills 不是只给你一段文字建议，而是希望把“科研输出”真正做出来：读文献能落到写作，读代码能落到复现，画图能落到论文表达。
 
-下面这些是 `engineer-figure` 中内置的示例图，展示它希望达到的图形质量和论文表达方式。
-
-### 论文级多面板图
-
-一张好的论文图不只是把数据摆出来，而是把“方法、证据、验证、结论”组织成一条能说服审稿人的证据链。
-
-![Material design, release logic and physical validation](engineer-figure/assets/gallery/fig1-material-mechanism-rich.png)
-
-![Perturbation, synergy and orthogonal validation](engineer-figure/assets/gallery/fig5-validation-perturbation-rich.png)
+下面这些是 `engineer-figure` 中相对干净、可控的图型示例。它们更适合放在 README 里展示能力边界：比较、趋势、热图、分布、网络关系、矩阵关系等。
 
 ### 图型能力预览
 
-除了完整的多面板图，也可以根据论文需要选择雷达图、极坐标图、网络图、矩阵图、热图、趋势图等更适合工科结果表达的图型。
+一张好的论文图不只是把数据摆出来，而是把“方法、证据、验证、结论”组织成一条能说服审稿人的证据链。对于刚入门的同学来说，先把基础图型画干净、画准确、画得可读，比盲目堆满复杂多面板更重要。
+
+| 比较图 | 趋势图 |
+|---|---|
+| ![Bar chart atlas](engineer-figure/assets/chart-atlas/atlas-01-bar-charts.png) | ![Line trend atlas](engineer-figure/assets/chart-atlas/atlas-02-line-trends.png) |
+
+| 热图 | 分布图 |
+|---|---|
+| ![Heatmap atlas](engineer-figure/assets/chart-atlas/atlas-03-heatmaps.png) | ![Distribution atlas](engineer-figure/assets/chart-atlas/atlas-06-distributions.png) |
 
 | 多指标/方向性比较 | 网络与矩阵关系 |
 |---|---|
 | ![Radar and polar chart atlas](engineer-figure/assets/chart-atlas/atlas-05-radar-polar.png) | ![Network and matrix chart atlas](engineer-figure/assets/chart-atlas/atlas-10-network-matrix.png) |
 
-### 工科参考图谱
-
-工科论文的好图，往往不是单纯的结果柱状图，而是把“物理系统、算法流程、仿真证据、控制闭环、工程验证”放在同一张图里。下面这些参考图更接近控制、仿真、机器人、逆向设计、物理约束建模等工科场景。
-
-| 仿真代理 / 神经算子 | 网络控制 / 强化学习 |
+| 不确定性/区间 | 堆叠面积/组成变化 |
 |---|---|
-| <img src="engineer-figure/assets/engineering-reference-atlas/02_simulation_surrogate_physics/05_deep_neural_operator_free_boundary_NMI2026_Fig1.png" alt="Neural operator engineering figure" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/08_network_control_model_based_rl_NMI2024_Fig1.png" alt="Network control reinforcement learning figure" width="420"> |
+| ![Forest interval atlas](engineer-figure/assets/chart-atlas/atlas-07-forest-interval.png) | ![Stacked area atlas](engineer-figure/assets/chart-atlas/atlas-08-area-stacked.png) |
 
-| 可解释控制 / 模型分解 | 逆向设计 / 工程优化 |
-|---|---|
-| <img src="engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/09_sindy_rl_interpretable_control_NatCommun2025_Fig1.png" alt="Interpretable model-based control figure" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/12_rf_inverse_design_emulator_NatCommun2024_Fig1.png" alt="Inverse design engineering figure" width="420"> |
+### 工科论文图的方向
 
-| 机器人 / 具身智能 | 电池 / 物理约束建模 |
-|---|---|
-| <img src="engineer-figure/assets/engineering-reference-atlas/05_robotics_embodied_ai/16_embodied_llm_robot_framework_NMI2025_Fig1.png" alt="Embodied robotics engineering figure" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/22_battery_pinn_soh_NatCommun2024_Fig1.png" alt="Battery physics-informed neural network figure" width="420"> |
+工科论文当然不只需要这些基础图型。真正高质量的工科图，往往要把“物理系统、算法流程、仿真证据、控制闭环、工程验证”组织在一起。`engineer-figure` 的内部参考图谱覆盖这些方向：
 
-> 注：当前仓库仍处于私有审查阶段。上面的工科参考图主要用于内部审查和视觉方向选择。公开发布前，建议再次检查 `engineer-figure/assets/` 中所有示例图和第三方参考素材的来源与许可证；不确定可再分发的图片，可以改成只保留论文链接、图片链接和“视觉结构说明”。
+- 神经算子、PINN、物理约束 GNN、数字孪生和仿真代理模型
+- 控制系统、强化学习、轨迹跟踪、鲁棒性和闭环反馈
+- 逆向设计、工程优化、代理仿真器和设计空间搜索
+- 机器人、具身智能、传感反馈和真实实验平台
+- 电池、能源系统、复杂动力学和可解释模型
+
+这些复杂参考图更适合作为内部设计灵感，而不一定适合直接放在 README 里宣传。公开发布前，建议把第三方论文参考图改成论文链接、图片链接和“视觉结构说明”，README 只展示我们自己能保证清晰度和可分发性的示例。
 
 ## 适合谁使用
 
