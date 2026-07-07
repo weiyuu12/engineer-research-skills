@@ -21,9 +21,9 @@ digital-twin, inverse-design, and interception-style figures, use:
    anti-overlap rules.
 5. `references/visual-quality-loop.md` for first-render inspection and revision.
 
-The older `assets/gallery/` and `assets/figures4papers/` materials are still useful,
-but they are no longer the first visual inspiration source for engineering-domain tasks.
-Use them mainly for reusable plotting mechanics.
+Use the generic `chart-atlas/` for reusable chart families and
+`engineering-reference-atlas/` for engineering, AI, control, simulation, and
+robotics figure structures.
 
 ## Bundled assets
 
@@ -31,8 +31,6 @@ Use them mainly for reusable plotting mechanics.
 assets/
   engineering-reference-atlas/   engineering/AI/control paper figure references
   chart-atlas/                   chart-family preview panels
-  figures4papers/                reusable Python demo scripts and previews
-  gallery/                       older simulated output previews
 references/
   engineering-reference-atlas.md engineering reference routing and source index
   visual-innovation-atlas.md     mechanism/process/evidence visual structures

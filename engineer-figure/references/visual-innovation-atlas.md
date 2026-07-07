@@ -11,8 +11,7 @@ after five seconds?". Then choose a structure that makes that understanding visi
 For engineering, deep learning, modeling, simulation, control, robotics, digital-twin,
 neural-operator, inverse-design, or interception-style requests, open
 `engineering-reference-atlas.md` before choosing a chart family. Use those examples as
-the default reference set; use older bio/chemistry-style galleries only when the user's
-domain actually needs them.
+the default reference set.
 
 ## Visual-job routing
 
@@ -31,7 +30,7 @@ domain actually needs them.
 
 ## Domain-neutral idea bank
 
-Use these beyond biology/chemistry. Adapt labels to the user's field.
+Adapt labels to the user's field.
 
 - **Engineering / algorithms**: decision landscape, feasible-window map, state machine,
   error-budget waterfall, pipeline with validation insets, latency/accuracy tradeoff

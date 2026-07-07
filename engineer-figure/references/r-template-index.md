@@ -11,7 +11,7 @@ any identifying labels from the source collection in user-facing output.
 - Never mention the original source file, folder, template number, course title, download
   location, chat attachment, or private document name.
 - When a template is useful, describe it generically by chart family: "a grouped bar
-  template", "a ComplexHeatmap workflow", "a survival plotting workflow".
+  template", "a ComplexHeatmap workflow", "a forest/interval plotting workflow".
 - If a reusable idea is copied from a private template, rewrite the final code as a clean,
   self-contained script with neutral function names and neutral comments.
 - If the user asks where a style came from, say it was adapted from the provided working
@@ -23,7 +23,7 @@ Search private materials by chart family and package names, not by exposing path
 
 ```bash
 find <private-template-root> -type f \( -name '*.R' -o -name '*.Rmd' -o -name '*.r' \)
-rg -n "ggplot|patchwork|ComplexHeatmap|ggrepel|svglite|cairo_pdf|survminer|circlize" <private-template-root>
+rg -n "ggplot|patchwork|ComplexHeatmap|ggrepel|svglite|cairo_pdf|forestplot|circlize" <private-template-root>
 ```
 
 Keep these commands in internal working notes only. Do not paste the user's private
@@ -41,12 +41,10 @@ Use these generic families to decide what to inspect:
 | Box, violin, paired, and raincloud-style distributions | `geom_boxplot`, `geom_violin`, `geom_jitter`, paired sample identifiers |
 | Heatmaps and annotated heatmaps | `ComplexHeatmap`, `HeatmapAnnotation`, `pheatmap`, `geom_tile` |
 | Correlation, scatter, bubble, and volcano plots | `geom_point`, `geom_smooth`, `ggrepel`, `logFC`, `pvalue`, bubble size scales |
-| PCA, PCoA, NMDS, tSNE, UMAP | `prcomp`, `cmdscale`, `vegan`, `Rtsne`, `Seurat`, embedding coordinates |
-| Survival, Cox, subgroup, ROC, forest | `survival`, `survminer`, `coxph`, `forestplot`, `timeROC`, hazard ratios |
-| Enrichment and pathway summaries | `clusterProfiler`, `GSEA`, `enrichGO`, `enrichKEGG`, dot plots, ridge plots |
-| Circular, genome, phylogeny, chromosome | `circlize`, `ggtree`, `karyoploteR`, genome interval tracks |
-| Single-cell and omics workflows | `Seurat`, marker genes, differential expression, cell-type annotation |
-| Maps, anatomy, and spatial summaries | `sf`, `maps`, `gganatogram`, spatial coordinates |
+| PCA, PCoA, NMDS, tSNE, UMAP | `prcomp`, `cmdscale`, `vegan`, `Rtsne`, embedding coordinates |
+| Subgroup, ROC, forest, and interval plots | `forestplot`, `timeROC`, confidence intervals, grouped estimates |
+| Circular engineering summaries | `circlize`, angular coordinates, cyclic process summaries |
+| Maps and spatial summaries | `sf`, `maps`, spatial coordinates |
 | Radar, lollipop, dumbbell, UpSet, Venn, Sankey | `ggradar`, `geom_segment`, `UpSetR`, `ggalluvial`, set operations |
 
 ## Adaptation checklist
@@ -60,7 +58,7 @@ When adapting a private template:
 - Remove decorative elements that do not support the core conclusion.
 - Ensure each statistical comparison has `n`, center, spread, test, and correction
   information in the legend or source-data notes.
-- For image panels, document raw file, crop, contrast, scale-bar calibration, and any
-  stitching or pseudo-coloring in private QA notes.
+- For image panels, document raw file, crop, contrast, scale-bar or physical-unit
+  calibration, and any stitching or pseudo-coloring in private QA notes.
 - Final code should be self-contained and should not require the original private
   folder structure unless the user explicitly asks to keep that workflow.

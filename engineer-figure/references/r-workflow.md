@@ -23,9 +23,9 @@ image/vector outputs or alter visual layout.
 |---|---|
 | Bars, boxplots, violins, dot plots, lines, volcano plots | `ggplot2`, `ggrepel`, `dplyr`, `tidyr` |
 | Multi-panel assembly | `patchwork`; use `cowplot` only when inset alignment requires it |
-| Rich omics heatmaps | `ComplexHeatmap`, `circlize`, `grid` |
-| Survival and clinical subgroup plots | `survival`, `survminer`, `forestplot`, `ggplot2` |
-| Circular/genome plots | `circlize`, `ggtree`, `gggenes`, domain-specific packages |
+| Rich engineering heatmaps | `ComplexHeatmap`, `circlize`, `grid` |
+| Subgroup, interval, and forest plots | `forestplot`, `ggplot2` |
+| Circular or angular plots | `circlize`, domain-specific packages |
 | Export | `svglite`, `grDevices::cairo_pdf`, `ragg` |
 
 ## Contract scaffold

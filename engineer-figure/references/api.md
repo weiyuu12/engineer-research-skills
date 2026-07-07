@@ -208,7 +208,7 @@ For dark image plates, move the label inside the panel and switch to white:
 
 ```python
 def style_dark_image_ax(ax, facecolor='black'):
-    """Prepare an axes for microscopy / rendering plates."""
+    """Prepare an axes for simulation, photo, or rendering plates."""
     ax.set_facecolor(facecolor)
     ax.set_xticks([])
     ax.set_yticks([])
@@ -323,7 +323,7 @@ def make_forest_plot(ax, labels, estimates, ci_low, ci_high,
                      colors=None, ref=0.0, xlabel=None, xlim=None,
                      marker='o', markersize=5, lw=1.5):
     """
-    Minimal forest plot helper for Nature-style clinical/statistical panels.
+    Minimal forest/interval plot helper for statistical or subgroup panels.
     """
     import numpy as np
     y = np.arange(len(labels))[::-1]
@@ -343,8 +343,8 @@ def make_forest_plot(ax, labels, estimates, ci_low, ci_high,
     ax.spines['top'].set_visible(False)
 ```
 
-Use pale `ax.axhspan(...)` bands behind contiguous label groups when you need the
-clinical-triptych look from `Nature`.
+Use pale `ax.axhspan(...)` bands behind contiguous label groups when you need
+condition groups or scenario blocks to read clearly.
 
 ---
 
@@ -355,7 +355,7 @@ def make_heatmap(ax, matrix, x_labels=None, y_labels=None,
                  cmap='magma', cbar_label=None, annotate=False,
                  fmt='{:.2f}', fontsize=12):
     """
-    2D heatmap with optional colorbar and cell annotations.
+    2D heatmap with optional colorbar and tile annotations.
     """
     import numpy as np
     import matplotlib as mpl

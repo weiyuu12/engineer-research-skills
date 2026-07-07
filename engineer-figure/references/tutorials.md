@@ -1,8 +1,10 @@
 # Tutorials — Engineer Figure
 
 End-to-end walkthroughs for the most common publication figure types.
-All examples use helpers from [api.md](api.md) and patterns from [common-patterns.md](common-patterns.md).
-For real production scripts and output previews from figures4papers, open [demos.md](demos.md).
+All examples use helpers from [api.md](api.md), generic chart patterns from
+[common-patterns.md](common-patterns.md), and engineering references from
+[engineering-reference-atlas.md](engineering-reference-atlas.md) when the figure
+needs a mechanism, control, simulation, or system-evidence structure.
 
 ---
 
@@ -176,7 +178,7 @@ plt.close(fig)
 
 ## Tutorial 4: Heatmap with dual colormaps (positive/negative columns)
 
-**Goal**: Score matrix where positive = Reds, negative = Blues_r. Cell text auto-contrasted.
+**Goal**: Score matrix where positive = Reds, negative = Blues_r. Tile text auto-contrasted.
 
 ```python
 import os

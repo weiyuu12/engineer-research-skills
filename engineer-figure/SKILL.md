@@ -1,7 +1,7 @@
 ---
 name: engineer-figure
 description: >-
-  Engineering-focused publication figure workflow for Python or R. Use whenever the user asks to create, revise, audit, or polish manuscript figures, multi-panel scientific plots, engineering/deep-learning/modeling/simulation/control figures, creative mechanism/process/evidence figures, Chinese paper/report figures, figures4papers-style matplotlib plots, or journal-ready SVG/PDF/TIFF outputs for Nature-family, Science, Cell, IEEE, Elsevier, Springer, or other high-impact venues. Before plotting, define the figure's conclusion, evidence logic, visual concept, export needs, and review risks. If the user has not chosen Python or R, ask "Python or R?" and stop. Use only the selected backend for figure generation, previewing, exporting, and QA. Supports matplotlib/seaborn and ggplot2/patchwork/ComplexHeatmap. Not for dashboards or Illustrator/Figma-first infographics.
+  Engineering-focused publication figure workflow for Python or R. Use whenever the user asks to create, revise, audit, or polish manuscript figures, multi-panel scientific plots, engineering/deep-learning/modeling/simulation/control figures, creative mechanism/process/evidence figures, Chinese paper/report figures, or journal-ready SVG/PDF/TIFF outputs for Nature-family, Science, IEEE, Elsevier, Springer, or other high-impact engineering venues. Before plotting, define the figure's conclusion, evidence logic, visual concept, export needs, and review risks. If the user has not chosen Python or R, ask "Python or R?" and stop. Use only the selected backend for figure generation, previewing, exporting, and QA. Supports matplotlib/seaborn and ggplot2/patchwork/ComplexHeatmap. Not for dashboards or Illustrator/Figma-first infographics.
 ---
 
 # Engineer Figure Skill
@@ -10,7 +10,7 @@ A guide for producing publication-quality scientific figures as a visual argumen
 as isolated pretty plots. Every figure starts from a claim, an evidence hierarchy, and a
 review-risk check before code or aesthetics.
 
-The older Python/matplotlib rules in this skill remain valid. The skill now also supports
+The Python/matplotlib rules in this skill remain valid. The skill now also supports
 R, especially `ggplot2 + patchwork + ComplexHeatmap + ggrepel + svglite/cairo_pdf + ragg`.
 If the user provides a private plotting template collection, use it only as an internal
 adaptation source and do not reveal its path, filenames, or provenance in user-facing output.
@@ -186,11 +186,12 @@ save_pub_r <- function(plot, filename, width_mm = 183, height_mm = 120, dpi = 60
   uncertainty, multi-agent interaction, spatial/trajectory evidence, or metric comparison.
 - For engineering, deep learning, modeling, simulation, control, robotics, digital-twin,
   or interception-like requests, load `references/engineering-reference-atlas.md` before
-  using the older bio/chemistry-heavy gallery or chart-type atlas.
+  using the generic chart atlas. Use the chart atlas when metric comparison is truly
+  the figure's main job.
 - Prefer one **hero panel** plus subordinate evidence panels over filling the canvas with equal-sized subplots.
 - If the user asks for a single chart, still identify its role in the manuscript claim:
-  discovery, mechanism, validation, comparison, robustness, or clinical/biological relevance.
-- Keep the background white for plots and diagrams; switch to black only for microscopy / volume-rendering image plates.
+  discovery, mechanism, validation, comparison, robustness, or engineering relevance.
+- Keep the background white for plots and diagrams; switch to black only for raster or simulation image plates that require it.
 - Prefer direct labels over legends when categories are spatially fixed or the legend would force unnecessary eye travel.
 - Keep one restrained palette per figure: usually one neutral family, one signal family, and one accent family.
 - Treat statistics, `n`, error-bar definitions, source-data traceability, and image-integrity notes as part of the figure,
@@ -204,15 +205,15 @@ save_pub_r <- function(plot, filename, width_mm = 183, height_mm = 120, dpi = 60
   final-size assembly.
 - For any figure that the user expects to look polished, load `references/visual-quality-loop.md`
   and run the visual brief + preview audit before final delivery.
-- When the user asks for broad `Nature` style rather than ML/NMI-specific style, read `references/nature-2026-observations.md` before choosing layout.
-- When the user references `figures4papers`, `nature-figure`, or the older `scientific-figure-making` skill,
-  treat this skill as the successor and open `references/demos.md` for bundled Python demo scripts.
+- When the user references `nature-figure` or an older scientific-figure workflow,
+  treat this skill as the engineering successor and use `references/engineering-reference-atlas.md`
+  plus the generic chart atlas assets.
 
 ## When to load this skill
 
-- Python or R figures for **papers, slides, or reports** targeting Nature, Science, Cell, NeurIPS, ICLR, or similar venues.
+- Python or R figures for **papers, slides, or reports** targeting Nature, Science, IEEE, NeurIPS, ICLR, Elsevier, Springer, or similar engineering/AI venues.
 - Requests involving **grouped bars, trend lines, heatmaps, radar plots, multi-panel grids**, or **PDF/SVG/high-DPI** output.
-- Any mention of "engineering figure", "Nature style", "publication figure", "paper figure", "SCI figure", "figures4papers", "scientific-figure-making", "R plotting template", or "high-quality scientific plot".
+- Any mention of "engineering figure", "Nature style", "publication figure", "paper figure", "SCI figure", "scientific-figure-making", "R plotting template", or "high-quality scientific plot".
 - Requests to improve a figure's logic, aesthetics, panel layout, figure legend, export quality, or journal-readiness.
 
 ## When NOT to load
@@ -235,11 +236,9 @@ save_pub_r <- function(plot, filename, width_mm = 183, height_mm = 120, dpi = 60
 | [references/backend-selection.md](references/backend-selection.md) | User has not chosen Python/R, asks for a recommendation, or a mixed Python/R workflow is possible |
 | [references/r-workflow.md](references/r-workflow.md) | User chooses R or provides R scripts/templates/data |
 | [references/r-template-index.md](references/r-template-index.md) | Need to adapt a user-provided or private R template collection without exposing source paths |
-| [references/qa-contract.md](references/qa-contract.md) | Before final delivery, revision package, microscopy/blot figure, or journal-specific audit |
+| [references/qa-contract.md](references/qa-contract.md) | Before final delivery, revision package, raster/simulation image figure, or journal-specific audit |
 | [references/design-theory.md](references/design-theory.md) | Typography, color theory, layout rationale, export policy |
 | [references/api.md](references/api.md) | Python PALETTE, helper function signatures, validation rules |
 | [references/common-patterns.md](references/common-patterns.md) | Python layout patterns: hero panels, legend-only axes, dark image plates, asymmetric layouts |
-| [references/nature-2026-observations.md](references/nature-2026-observations.md) | Real `Nature` page archetypes: schematic-led composites, dark image plates, clinical triptychs, asymmetric hero layouts |
 | [references/tutorials.md](references/tutorials.md) | End-to-end walkthroughs: bars, trends, heatmaps |
 | [references/chart-types.md](references/chart-types.md) | Radar, 3D sphere, fill_between, scatter patterns |
-| [references/demos.md](references/demos.md) | Bundled figures4papers Python scripts and output previews for concrete pattern adaptation |

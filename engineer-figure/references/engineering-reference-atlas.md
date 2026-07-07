@@ -11,14 +11,13 @@ verify the article license and cite the source.
 
 ## Replacement policy
 
-For engineering and AI-control tasks, this atlas replaces the older bio/chemistry-heavy
-gallery as the first visual inspiration source.
+For engineering and AI-control tasks, this atlas is the first visual inspiration source.
 
 - Use this atlas to choose the figure's **visual argument**.
-- Use `demos.md`, `common-patterns.md`, and `api.md` for reusable Python code patterns.
+- Use `common-patterns.md` and `api.md` for reusable Python code patterns.
 - Use `typography-layout-contract.md` for Chinese fonts, readable size ladders, margins,
   and anti-overlap rules.
-- Use the older chart atlas only after deciding that metric comparison is truly the
+- Use the generic chart atlas only after deciding that metric comparison is truly the
   main job of the figure.
 
 ## How to use it

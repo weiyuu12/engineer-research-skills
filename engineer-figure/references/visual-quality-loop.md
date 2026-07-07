@@ -10,7 +10,7 @@ Before writing plotting code, create a short visual brief in working notes:
 
 ```text
 Visual family:
-  quantitative grid / schematic-led / image plate + quant / clinical triptych /
+  quantitative grid / schematic-led / image plate + quant /
   asymmetric hero / minimal single-panel
 Hero element:
   which panel or mark should be seen first
@@ -28,7 +28,7 @@ Main risk:
   crowding / weak hierarchy / too many colors / tiny labels / legend travel /
   misleading scale / same-looking panels / Chinese glyph fallback / blank-heavy layout
 Reference pattern:
-  closest atlas, demo, Nature archetype, or engineering-reference-atlas ID to adapt
+  closest chart-atlas family or engineering-reference-atlas ID to adapt
 Rejected default:
   why a plain bar / line / heatmap is not enough, or why it is justified
 ```
@@ -38,7 +38,7 @@ white background, one hero color family, neutral baselines, direct labels when p
 small bold lowercase panel labels, and one shared legend outside data regions.
 For engineering, deep learning, modeling, simulation, control, robotics, or digital-twin
 topics, choose the reference pattern from `engineering-reference-atlas.md` before using
-the older bio/chemistry-heavy gallery.
+the generic chart atlas.
 
 ## First-render audit
 

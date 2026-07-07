@@ -1,7 +1,7 @@
 # Engineering Figure Design Theory
 
-Derived from scripts in the [figures4papers](https://github.com/ChenLiu-1996/figures4papers) repository
-(published in *Nature Machine Intelligence* and top ML/bioinformatics venues).
+Engineering-oriented design rules for publication figures, adapted from general
+Nature-style plotting practice and the local engineering reference atlas.
 
 ---
 
@@ -121,19 +121,19 @@ DEFAULT_COLOR_ORDER_NMI_PASTEL = [
 Rules:
 1. Keep related baselines in one cool family.
 2. Keep `Tiny / Base / Large` or sibling variants in one hero family.
-3. Reserve green/red for arrows, gains, drops, thresholds, or signed biological direction.
+3. Reserve green/red for arrows, gains, drops, thresholds, warnings, or signed changes.
 4. Never remap the same method to a different hue family in another panel.
 5. If in doubt, reduce saturation before adding more categories.
 
 ### Modality-specific palette discipline from sampled 2026 Nature figures
 
-- **Imaging plates**: grayscale context + 1–2 fluorescent accent channels on black.
-- **Schematic/material pages**: derive the palette from the physical objects in the schematic,
+- **Simulation/image plates**: grayscale context + 1–2 restrained accent channels on black.
+- **Schematic/device pages**: derive the palette from the physical objects in the schematic,
   then reuse softened versions of those colors in the support plots.
-- **Clinical composites**: dark baseline/reference series, restrained warm/cool follow-up hues,
-  pale background bands in forest plots.
-- **Genomics / systems pages**: neutral grey scaffolds plus a small number of biologically
-  meaningful highlight families, often one red and one blue.
+- **Control or validation composites**: dark baseline/reference series, restrained warm/cool
+  follow-up hues, pale background bands in interval plots.
+- **System architecture pages**: neutral grey scaffolds plus a small number of semantically
+  meaningful highlight families, often one blue family and one warning/accent family.
 
 ### Ablation alpha encoding
 When ablating components of one method, use a **single color with varying alpha**:
@@ -273,7 +273,7 @@ error_kw = {
 
 - Line width: 2–3pt with controlled alpha.
 - Marker size: 8–12pt circles.
-- For clinical or longitudinal triptychs, place one shared legend above the row rather than repeating it per axis.
+- For trajectory or longitudinal triptychs, place one shared legend above the row rather than repeating it per axis.
 - Fading alpha for temporal progression:
   ```python
   from matplotlib.collections import LineCollection
@@ -308,7 +308,7 @@ ax.set_frame_on(False)
 ax.tick_params(axis='x', which='both', bottom=False, top=False, length=0)
 ```
 
-Cell text contrast:
+Tile text contrast:
 ```python
 r, g, b, _ = cmap(norm(value))
 luminance = 0.299*r + 0.587*g + 0.114*b
@@ -378,7 +378,7 @@ In a multi-panel figure, each panel should be independently informative. Coverin
 Before finalising:
 
 - [ ] Panel b does **not** re-display the same data as panel a in a different visual form
-- [ ] Panel c adds a dimension absent from a and b (e.g., correlation, biological relationship)
+- [ ] Panel c adds a dimension absent from a and b (e.g., correlation, tradeoff, or control relationship)
 - [ ] Each panel has its own axis-label vocabulary (different x/y quantities)
 
 ### Common redundancy traps
@@ -386,7 +386,7 @@ Before finalising:
 | Trap | Example | Fix |
 |------|---------|-----|
 | Absolute + absolute | Stacked bar (%) + heatmap of same % | Replace heatmap with z-score deviation |
-| Subset of parent | Tumor-only ranked bar is just one column of the stacked bar | Swap for scatter: tumor % vs. immune % |
+| Subset of parent | One controller-only ranked bar is just one column of the stacked comparison | Swap for scatter: tracking error vs. energy use |
 | Two rankings | Two ranked bars on related metrics | Replace one with scatter / bubble |
 | Different chart, same data slice | Pie + stacked bar | Merge or replace one with a relationship plot |
 
@@ -395,7 +395,7 @@ Before finalising:
 When panel a shows absolute composition, panel b should show **what is atypical** per group:
 
 ```python
-# heat: DataFrame (cohorts × cell-type categories), values in %
+# heat: DataFrame (operating conditions × component categories), values in %
 z = (heat - heat.mean(axis=0)) / heat.std(axis=0)
 im = ax.imshow(z.values, cmap="RdBu_r", aspect="auto", vmin=-2.5, vmax=2.5)
 # colorbar label:
@@ -406,20 +406,20 @@ Use `RdBu_r` (red = enriched above average, blue = depleted). This diverging vie
 
 ### Bubble scatter (complement to both)
 
-When a = composition, b = deviation, panel c should reveal **biological co-variation**:
+When a = composition, b = deviation, panel c should reveal **engineering co-variation**:
 
 ```python
-# x: dominant compartment (e.g., tumor %)
-# y: functional readout (e.g., immune-cell %)
-# size: third variable (e.g., stroma %)
-ax.scatter(x, y, s=stroma * scale, c=colors,
+# x: dominant component share (e.g., actuator energy %)
+# y: functional readout (e.g., tracking error)
+# size: third variable (e.g., thermal load)
+ax.scatter(x, y, s=thermal_load * scale, c=colors,
            edgecolors="white", linewidth=0.8, alpha=0.9)
 # Quadrant reference lines at median x and median y
 ax.axvline(np.median(x), lw=1.2, ls="--", color="#767676", alpha=0.6)
 ax.axhline(np.median(y), lw=1.2, ls="--", color="#767676", alpha=0.6)
 ```
 
-Label quadrants ("Immune-hot / low tumor", "Immune-desert / high tumor", …) with small grey text.
+Label quadrants ("low energy / low error", "high energy / high error", etc.) with small grey text.
 
 ---
 

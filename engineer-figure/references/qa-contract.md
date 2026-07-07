@@ -1,7 +1,7 @@
 # QA Contract
 
 Use this before final delivery, before a revision package, and whenever the figure
-contains microscopy, blots, gels, clinical subgroup analysis, or statistical claims.
+contains raster/simulation image panels, experimental photos, subgroup analysis, or statistical claims.
 Journal rules change, so verify the latest target journal author guide for final
 submission. The values below are conservative defaults for Nature-family style work.
 
@@ -12,8 +12,7 @@ submission. The values below are conservative defaults for Nature-family style w
 - Nature preparing figures/specifications: `https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/`
 - Nature initial submission and statistics guidance: `https://www.nature.com/nature/for-authors/initial-submission`
 - Nature formatting guide: `https://www.nature.com/nature/for-authors/formatting-guide`
-- Journal of Cell Biology figure/video guidelines for microscopy-oriented image QA: `https://rupress.org/jcb/pages/fig-vid-guidelines`
-- Elsevier/Cell-family image-manipulation baseline: `https://www.sciencedirect.com/journal/the-cell-surface/publish/guide-for-authors`
+- Target journal image-integrity and figure-preparation guidance, if the venue has stricter requirements than the general Nature defaults.
 
 ## Pre-submission checklist
 
@@ -33,10 +32,10 @@ submission. The values below are conservative defaults for Nature-family style w
 | Font | One primary font family is locked across the figure set; Chinese glyphs render correctly and do not silently mix Songti/Heiti/DengXian/YaHei |
 | Color | No rainbow color maps; red/green is not the only encoding; grayscale print remains interpretable |
 | Legend strategy | Shared or direct labels where possible; no repeated redundant legends |
-| Statistics | `n`, biological/technical repeat definition, center, spread, test, correction, and exact comparison are documented |
+| Statistics | `n`, experimental/simulation repeat definition, center, spread, test, correction, and exact comparison are documented |
 | Source data | Quantitative panels can be traced to a clean CSV/TSV/XLSX or script output |
-| Raster resolution | Photos/microscopy are high-resolution enough for final size; line art uses vector where possible |
-| Microscopy scale | Scale bar is present, calibrated, and not only a magnification factor |
+| Raster resolution | Photos, simulation snapshots, and field images are high-resolution enough for final size; line art uses vector where possible |
+| Image scale | Scale bar or physical units are present when the image represents a spatial object, field, or device |
 | Image integrity | Crop, contrast, pseudo-color, stitching, reuse, and raw-file provenance are recorded |
 | Export bundle | Script, source data, SVG, PDF, TIFF/PNG preview, and QA notes are delivered together when requested |
 
@@ -46,8 +45,8 @@ For each quantitative panel, capture:
 
 ```text
 n definition:
-biological replicates:
-technical replicates:
+experimental repeats:
+simulation seeds or runs:
 center statistic:
 spread/interval:
 test:

@@ -246,7 +246,8 @@ Rules:
 
 ## Pattern 13: Dark image plate with repeated views
 
-Use for microscopy, volume rendering, or fluorescence-heavy panels.
+Use for simulation snapshots, volume rendering, field images, thermal images, or
+other raster-heavy engineering panels.
 
 ```python
 fig = plt.figure(figsize=(7.2, 6.5))
@@ -270,9 +271,10 @@ Rules:
 
 ---
 
-## Pattern 14: Clinical triptych
+## Pattern 14: Trajectory / effect-summary triptych
 
-Use for outcome-over-time figures that combine trajectories, effect sizes, and summary proportions.
+Use for engineering figures that combine trajectories, effect sizes, and summary
+proportions or success rates.
 
 ```python
 fig = plt.figure(figsize=(7.2, 6.8))
@@ -344,7 +346,5 @@ Rules:
 - [SKILL.md](../SKILL.md) — When to use this skill
 - [api.md](api.md) — Helper function signatures and PALETTE
 - [design-theory.md](design-theory.md) — Rationale behind every pattern above
-- [nature-2026-observations.md](nature-2026-observations.md) — Real Nature page archetypes behind these patterns
 - [tutorials.md](tutorials.md) — End-to-end walkthroughs
 - [chart-types.md](chart-types.md) — Radar, 3D, scatter patterns
-- [demos.md](demos.md) — Bundled figures4papers scripts and previews
