@@ -30,7 +30,23 @@
 |---|---|
 | ![Radar and polar chart atlas](engineer-figure/assets/chart-atlas/atlas-05-radar-polar.png) | ![Network and matrix chart atlas](engineer-figure/assets/chart-atlas/atlas-10-network-matrix.png) |
 
-> 注：当前仓库仍处于私有审查阶段。公开发布前，建议再次检查 `engineer-figure/assets/` 中所有示例图和第三方参考素材的来源与许可证；不确定可再分发的图片，可以改成只保留链接和说明。
+### 工科参考图谱
+
+工科论文的好图，往往不是单纯的结果柱状图，而是把“物理系统、算法流程、仿真证据、控制闭环、工程验证”放在同一张图里。下面这些参考图更接近控制、仿真、机器人、逆向设计、物理约束建模等工科场景。
+
+| 仿真代理 / 神经算子 | 网络控制 / 强化学习 |
+|---|---|
+| <img src="engineer-figure/assets/engineering-reference-atlas/02_simulation_surrogate_physics/05_deep_neural_operator_free_boundary_NMI2026_Fig1.png" alt="Neural operator engineering figure" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/08_network_control_model_based_rl_NMI2024_Fig1.png" alt="Network control reinforcement learning figure" width="420"> |
+
+| 可解释控制 / 模型分解 | 逆向设计 / 工程优化 |
+|---|---|
+| <img src="engineer-figure/assets/engineering-reference-atlas/03_control_reinforcement_learning/09_sindy_rl_interpretable_control_NatCommun2025_Fig1.png" alt="Interpretable model-based control figure" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/12_rf_inverse_design_emulator_NatCommun2024_Fig1.png" alt="Inverse design engineering figure" width="420"> |
+
+| 机器人 / 具身智能 | 电池 / 物理约束建模 |
+|---|---|
+| <img src="engineer-figure/assets/engineering-reference-atlas/05_robotics_embodied_ai/16_embodied_llm_robot_framework_NMI2025_Fig1.png" alt="Embodied robotics engineering figure" width="420"> | <img src="engineer-figure/assets/engineering-reference-atlas/04_engineering_design_systems/22_battery_pinn_soh_NatCommun2024_Fig1.png" alt="Battery physics-informed neural network figure" width="420"> |
+
+> 注：当前仓库仍处于私有审查阶段。上面的工科参考图主要用于内部审查和视觉方向选择。公开发布前，建议再次检查 `engineer-figure/assets/` 中所有示例图和第三方参考素材的来源与许可证；不确定可再分发的图片，可以改成只保留论文链接、图片链接和“视觉结构说明”。
 
 ## 适合谁使用
 
